@@ -1,0 +1,17 @@
+Commands used 
+
+kubectl apply -f node-red-deployment.yaml
+kubectl apply -f node-red-service.yaml
+minikube service node-red-service --url
+
+Before starting apllication and accesing it via ip and port addresses, after vm creation the site is unreachable(timeout) 
+A few research in internet give me info about port forwarding in VirtualBox
+So
+1) Go to virtualbox app
+2) find minikube VM
+3) add new rule to forward port 1880 to port that minikube gives you after command
+minikube service node-red-service --url
+
+After this steps it should work properly(in my case it worked at least)
+
+
